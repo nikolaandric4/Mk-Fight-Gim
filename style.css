@@ -1,0 +1,269 @@
+/*
+PHONE = 0-600px
+TABLET PORTRAIT = 600-900px
+TABLET LANSCAPE = 900-1200px
+REGULAR = 1200-1800px
+BIG DESKTOP = 1800px +
+*/
+/*
+breakpoint-arguments-choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
+@keyframes btn-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html,
+    body {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html,
+    body {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html,
+    body {
+      font-size: 75%; } }
+
+body {
+  padding: 1rem;
+  font-family: 'Anton', sans-serif;
+  font-size: 1.6rem; }
+
+.section-about {
+  padding: 3rem;
+  text-align: center;
+  position: relative; }
+
+.separator-section {
+  text-align: center;
+  padding: 3rem;
+  color: #fff;
+  background-color: #000;
+  border-top: solid #fff 0.3rem; }
+
+.section-training {
+  padding: 3rem;
+  position: relative;
+  background-color: #fff; }
+
+.heading-primary {
+  color: #fff;
+  font-family: 'Anton', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  /* -webkit-text-stroke: 1px #4c4c4c; */ }
+  .heading-primary__top {
+    display: block;
+    letter-spacing: 1rem;
+    font-size: 12rem; }
+  .heading-primary__bot {
+    display: block;
+    font-size: 8rem;
+    letter-spacing: 1rem; }
+    .heading-primary__bot--gym {
+      color: #000; }
+
+.heading-secondary {
+  display: inline-block;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem; }
+
+.heading-tertiary {
+  display: inline-block;
+  font-size: 2.5rem;
+  text-transform: uppercase; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 6rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 4rem; }
+
+.btn {
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 2rem 4rem;
+  background-image: linear-gradient(-90deg, #fff 0%, #fff 50%, #000 50%);
+  background-size: 300%;
+  border-bottom: solid #000 3px;
+  font-size: 2.5rem;
+  transform: skewX(-20deg);
+  transition: all .3s; }
+  .btn:hover {
+    background-position: 20rem;
+    color: #000; }
+  .btn:hover > * {
+    transform: translateY(-3px) skewX(20deg); }
+  .btn:active > * {
+    transform: translateY(-1px) skewX(20deg); }
+  .btn__animated {
+    animation-name: btn-animation;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    animation-delay: 1s; }
+  .btn__span {
+    display: inline-block;
+    transform: skewX(20deg);
+    transition: transform .1s; }
+
+.about-box {
+  width: 75%;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 4rem;
+  transform: skewX(-20deg);
+  border-radius: .3rem; }
+  .about-box:not(:last-child) {
+    margin-bottom: 3rem; }
+  .about-box > * {
+    transform: skewX(20deg); }
+  .about-box__img {
+    margin-right: 3rem;
+    float: left; }
+    .about-box__img::after {
+      content: "";
+      display: table;
+      clear: both; }
+    .about-box__img--1 {
+      height: 15rem;
+      width: 15rem;
+      border-radius: 10rem; }
+  .about-box__caption {
+    display: inline-block;
+    width: 60%; }
+    .about-box__caption--text {
+      font-weight: 300; }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
+  .bg-video__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.8);
+    object-fit: cover;
+    opacity: .8; }
+
+.separator {
+  display: block;
+  width: 100%;
+  height: 10rem;
+  background-color: #000;
+  color: #fff; }
+
+.card {
+  width: 100%;
+  height: 40rem;
+  position: relative;
+  perspective: 100rem;
+  -webkit-perspective: 100rem; }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__side {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all .6s;
+    -webkit-box-shadow: 1px 2px 15px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 2px 15px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 2px 15px 0px rgba(0, 0, 0, 0.75);
+    text-align: center; }
+    .card__side--front {
+      top: 0;
+      left: 0; }
+      .card__side--front-1 {
+        height: 20rem;
+        background-image: url("../img/kruzni.jpg");
+        background-size: cover; }
+      .card__side--front-2 {
+        height: 20rem;
+        background-image: url("../img/snaga.jpg");
+        background-size: cover; }
+      .card__side--front-3 {
+        height: 20rem;
+        background-image: url("../img/borilacki.jpg");
+        background-size: cover; }
+    .card__side--back {
+      top: 0;
+      left: 0;
+      transform: rotateY(180deg); }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row [class^=col-]:not(:last-child) {
+    margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) /2);
+    float: left; }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem)/ 3);
+    float: left; }
+  .row .col-2-of-3 {
+    width: calc((100% - (100% - 2 * 6rem)/ 3) - 6rem);
+    float: left; }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4);
+    float: left; }
+  .row .col-3-of-4 {
+    width: calc(100% - ((100% - 3 * 6rem) / 4) - 6rem);
+    float: left; }
+
+.header {
+  height: 100vh;
+  background-image: linear-gradient(-60deg, #fff 0%, #fff 50%, #000 50%); }
+  .header__logo-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3rem; }
+  .header__logo {
+    height: 15rem; }
+
+.heading-box {
+  position: absolute;
+  top: 40%;
+  left: 48%;
+  transform: translate(-50%, -50%); }
+
+.btn-box {
+  position: absolute;
+  top: 75%;
+  left: 60%;
+  transform: translate(-50%, -50%); }
